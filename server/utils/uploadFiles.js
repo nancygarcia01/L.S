@@ -26,7 +26,7 @@ try {
     let fileName = `${new Date().getTime()}.${extension}`;
 
    fs.writeFileSync(`${path.dirname(
-    require.main.filename)}/sever${namePath}/${fileName}`,
+    require.main.filename)}/server${namePath}/${fileName}`,
    response.data,
    {
     encoding: "utf8",
@@ -34,6 +34,7 @@ try {
    );
    return `${namePath}, ${fileName}`;
 } catch (error) {
+    console.log(error)
     return new Error ("internal server error")
     
 }

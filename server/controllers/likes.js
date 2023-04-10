@@ -10,6 +10,7 @@ const addlikeDislike= async(req, res) =>{
                 statusDelete: false,
             },
         });
+        if(!existplace) return res.status(201).send("no se encontro el lugar");
 
         const addlikeDislike= await models.likes.create({
             isLike: body.isLike,

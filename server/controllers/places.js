@@ -27,6 +27,7 @@ try {
     addressId: address.id,
     image,
     userId:userId,
+
    
    });
 
@@ -40,12 +41,10 @@ try {
 
 const getplace = async(req, res)=>{
 try {
+   
     const place = await models.places.findAll({
         attributes:{exclude:["updatedAt"]},
-        where:{
-            name:"restaurate el chavo"
-        },
-
+      
      include:[
         {
           model:models.address,

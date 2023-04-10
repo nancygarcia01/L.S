@@ -14,6 +14,7 @@ try {
     return res.status(201).send(addUsers);
 
 } catch (error) {
+    console.log(error);
     return res.status(500)
     .send("lo sentimos ocurrio un problema en el servidor"); 
 }
