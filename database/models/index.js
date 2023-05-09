@@ -6,7 +6,6 @@ const Sequelize = require('sequelize');
 const process = require('process');
 const basename = path.basename(__filename);
 const { DB } = require("../../config/config");
-//const { config } = require('dotenv');
 const config = DB;
 const db = {};
 
