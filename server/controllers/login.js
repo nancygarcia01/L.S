@@ -12,7 +12,8 @@ const login= async(req, res) => {
            }
        });
        if(!findUsers)
-       return res.status(200).send("no se encontro el usuario");
+       return res.status(404).send("no se encontro el usuario");
+     
 
        if(!bcryptjs.compareSync(body.password, findUsers.password))
          return res.status(404).send("contraseña no coincide");
@@ -32,3 +33,4 @@ const login= async(req, res) => {
 }
 
 module.exports= {login};
+
