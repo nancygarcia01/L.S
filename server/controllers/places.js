@@ -66,16 +66,15 @@ try {
 };
 const updateplace = async(req, res)=> {
     try {
-        //actualizar un lugar
-        const {placeId} = req.params; //buscar el id id de places
+       
+        const {placeId} = req.params;
         const {body}= req;
         const place = await models.places.findOne({
             where:{
                 id: placeId,
             },
         });
-        if (!place) return res.status(404).send("el lugar no se encuentra");
-        //se actualizan ahora los datos de lugar.
+        if (!place) return res.status(404).send("el lugar no se encueentra")
 const address= await models.address.findOne({
     where:{
         id:place.addressId,
